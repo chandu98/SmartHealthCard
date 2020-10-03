@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "667889777785",
+    "firebase_url": "https://smarthealthcard-e8d2f.firebaseio.com",
+    "project_id": "smarthealthcard-e8d2f",
+    "storage_bucket": "smarthealthcard-e8d2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667889777785:android:cc3e19ef0dfc1b6d8fa8a8",
+        "android_client_info": {
+          "package_name": "smarthealthcard.com.smarthealthcard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667889777785-gonfu5hl8j6206dcfr8g74h2o7q0g16p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "smarthealthcard.com.smarthealthcard",
+            "certificate_hash": "f75343cc6dd510f57e68905531ca2b16004106f5"
+          }
+        },
+        {
+          "client_id": "667889777785-bogid3hsobc6bnno1njcp536rcfhdp46.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0agiEiFwy4jwu8EvZ20FPW4mYWR5nuAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667889777785-bogid3hsobc6bnno1njcp536rcfhdp46.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

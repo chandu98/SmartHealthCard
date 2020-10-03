@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Smart Health Card</string>
+    <string name="login_button">Login with Google</string>
+    <string name="home">Home</string>
+    <string name="recent">Recents</string>
+    <string name="scan">Scan</string>
+    <string name="profile">Profile</string>
+    <string name="update">Save</string>
+    <string name="description">Description</string>
+    <string name="view_upload">View Uploads</string>
+    <string name="send">Send Details</string>
+    <string name="google_client_id">667889777785-a9m8qlupt4211lpl78rfdrkjn1h0928f.apps.googleusercontent.com</string>
+    <string name="get_started_with_google_signin">* Get started with google signin</string>
+    <string name="medical_reports">Medical Reports</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="allergies">Allergies</string>
+    <string name="disease">Enter Disease</string>
+    <string name="my_medical_information">My Medical Information</string>
+    <string name="medical_history">Medical History</string>
+</resources>

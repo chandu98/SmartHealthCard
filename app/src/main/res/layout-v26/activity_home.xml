@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/home_layout"
+        android:layout_width="394dp"
+        android:layout_height="481dp"
+        android:layout_above="@+id/tabLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="63dp"
+        android:background="@drawable/button_margin_transparent">
+
+        <TextView
+            android:layout_width="278dp"
+            android:layout_height="71dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="72dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginRight="71dp"
+            android:layout_marginBottom="408dp"
+            android:text="Main Menu"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/medicalbutton"
+            android:layout_width="146dp"
+            android:layout_height="148dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="98dp"
+            android:background="@drawable/button_margin_transparent"
+            android:drawableTop="@drawable/image1"
+
+            android:onClick="medicalReportsImplementation"
+            android:paddingTop="20dp"
+            android:text="Medical Reports"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/prescriptionsbutton"
+            android:layout_width="146dp"
+            android:layout_height="148dp"
+            android:layout_alignTop="@+id/medicalbutton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
+            android:background="@drawable/button_margin_transparent"
+            android:drawableTop="@drawable/image2"
+            android:onClick="prescriptionsImplementation"
+            android:paddingTop="20dp"
+            android:text="Prescriptions"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/billsbutton"
+            android:layout_width="146dp"
+            android:layout_height="148dp"
+            android:layout_below="@+id/medicalbutton"
+            android:layout_alignStart="@+id/medicalbutton"
+            android:layout_alignLeft="@+id/medicalbutton"
+            android:layout_marginStart="-4dp"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/button_margin_transparent"
+            android:drawableTop="@drawable/image3"
+            android:onClick="billsImplementation"
+            android:paddingTop="20dp"
+            android:text="Bills"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/medicalHistorybutton"
+            android:layout_width="146dp"
+            android:layout_height="148dp"
+            android:layout_alignStart="@+id/prescriptionsbutton"
+            android:layout_alignLeft="@+id/prescriptionsbutton"
+            android:layout_alignTop="@+id/billsbutton"
+            android:background="@drawable/button_margin_transparent"
+            android:drawableTop="@drawable/image4"
+            android:onClick="medicalHistoryImplementation"
+            android:paddingTop="20dp"
+            android:text="Medical History"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/recent_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/recentListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scan_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="530dp"
+        android:layout_above="@+id/tabLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="102dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_margin_transparent"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userImage"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_remark"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/details"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="@string/allergies"
+                android:hint="@string/description"
+                android:maxLength="200"
+                android:maxLines="3"
+                android:minLines="1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/sendDetails"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_remark"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="sendDetailsImplementation"
+            android:text="@string/send"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/viewUploads"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sendDetails"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="viewUploadsImplementation"
+            android:text="@string/view_upload"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_margin_transparent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileImage"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_mobile"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/mobile"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_marginTop="5dp"
+                    android:hint="Enter Mobile number"
+                    android:inputType="phone"
+                    android:maxLength="10" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobile"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_background"
+                android:onClick="updateImplementation"
+                android:text="@string/update"
+                android:textColor="@color/colorWhite" />
+
+            <LinearLayout
+                android:id="@+id/layout_smart"
+                android:layout_width="388dp"
+                android:layout_height="246dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_margin_transparent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Smart Health Card"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/details_card"
+                    android:layout_width="370dp"
+                    android:layout_height="88dp"
+                    android:layout_marginTop="10dp"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/profileImage2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="30dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <LinearLayout
+                        android:id="@+id/details_info"
+                        android:layout_width="283dp"
+                        android:layout_height="91dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name_on"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:src="@mipmap/ic_launcher"
+                            android:text="my name"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/email_on"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:src="@mipmap/ic_launcher"
+                            android:text="my email"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/my_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:src="@mipmap/ic_launcher"
+                            android:text="my mobile no"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/qr_code"
+                    android:layout_width="371dp"
+                    android:layout_height="93dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/qrImage"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp" />
+                    <TextView
+                        android:id="@+id/note_qr_scan"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:textColor="@color/colorBlue"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="30dp"
+                        android:textStyle="bold|italic"
+                        android:textSize="14sp"
+                        android:text="Scan this QR code to access user medical information"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/home"
+            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_notifications_black_24dp"
+            android:text="@string/recent"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/scan_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/scan"
+            android:drawableTop="@drawable/ic_center_focus_strong_black_24dp"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/profile"
+            android:drawableTop="@drawable/ic_person_black_24dp"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</RelativeLayout>
